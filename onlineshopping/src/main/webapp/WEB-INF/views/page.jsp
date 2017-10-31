@@ -53,9 +53,14 @@
 				<%@include file="about.jsp"%>
 			</c:if>
 
-			<!-- loading only when user clicks Contact -->
+			<!-- load only when user clicks Contact -->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			<!-- load only when user clicks AllProducts or categoryProducts -->
+			<c:if test="${userClickAllProducts == true  or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 		<!-- Footer -->
@@ -63,7 +68,7 @@
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.min.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script> 
 		<script src="${js}/myapp.js"></script>
 
 	</div>
